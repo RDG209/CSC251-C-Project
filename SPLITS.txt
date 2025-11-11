@@ -1,0 +1,71 @@
+1) Data Handling
+BUILD: gradebook.c and gradebook.h
+
+FUNCTIONS: 
+add_student(id, name, grade) - Add new student to arrays
+find_student(id) - Search for student by ID, return position
+update_student(id, new_grade) - Change a student's grade
+delete_student(id) - Remove student from arrays
+get_student_count() - Return how many students we have
+get_student_data(position) - Get ID, name, grade for position X
+
+DATA TO MANAGE:
+student_ids[] (integers)
+student_names[][] (strings)
+student_grades[] (floats)
+student_count variable (integer)
+
+ - Test Data Handling by defining hardcoded 3+ students and testing all functions
+
+
+2) File Managing
+BUILD: storage.c and storage.h
+FUNCTIONS:
+load_from_file() - Read from "students.txt", fill the arrays
+save_to_file() - Write all student data to "students.txt"
+file_exists() - Check if data file exists
+FILE FORMAT: One student per line: ID,Name,Grade
+
+ - Test File Managing by manually writing a txt in the right format and print it out correctly, save it under a different name, and ensure the checker works
+
+
+3) Sorter/Calculate
+BUILD: sort.c and sort.h
+FUNCTIONS:
+sort_by_id() - Rearrange arrays in order of student ID (all 3 arrays need to be changed with each sort)
+sort_by_name() - Rearrange arrays in alphabetical name order (all 3 arrays need to be changed with each sort)
+sort_by_grade() - Rearrange arrays by grade (high to low) (all 3 arrays need to be changed with each sort)
+calculate_stats() - Compute simple stats (min, max, average grades)
+show_stats() - Print the simple statistics (min grade, max grade, avg grade should be sufficient IMO)
+
+ - Test Sorting with hardcoded unsorted data, like a dummy id/name/grade arrays 
+
+
+4) User Interface
+BUILD: ui.c and ui.h
+FUNCTIONS:
+show_menu() - Display menu options to user (infinite while, switch statement)
+get_menu_choice() - Read what user types (optional, you can combine this into show_menu())
+Options:
+ add_student() - Get ID, name, grade for adding students
+ show_student() - Find and display one student's info neatly by id (use (1) find_student funct)
+ update_student() - Update a student (call funct from (1))
+ delete_student() - Delete a student (call funct from (1))
+ sort_students() - Sorts students, asks user what to sort them by (use functs from (1))
+ show_all_students() - Display all students nicely formatted
+ close() - end the menu and display a farewell message
+
+ - Test User Interface with printf statements in the options to ensure the menu selections works well
+
+
+
+main file will use:
+#include "gradebook.h"
+#include "storage.h"   
+#include "sort.h"
+#include "ui.h"
+
+To load in ubuntu, ensure all files are in the right folder and run:
+gcc -std=c11 -Wall -Wextra -Werror gradebook.c main.c storage.c sort.c ui.c -o gradebook
+
+I believe .h files are more akin to interfaces while the .c has the actual code.
