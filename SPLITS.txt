@@ -19,7 +19,7 @@ student_count variable (integer)
 
 
 2) File Managing
-BUILD: storage.c and storage.h
+BUILD: file.c and file.h
 FUNCTIONS:
 load_from_file() - Read from "students.txt", fill the arrays
 save_to_file() - Write all student data to "students.txt"
@@ -66,7 +66,7 @@ main file will use:
 #include "ui.h"
 
 To load in ubuntu, ensure all files are in the right folder and run:
-gcc -std=c11 -Wall -Wextra -Werror gradebook.c main.c storage.c sort.c ui.c -o gradebook
+gcc -std=c11 -Wall -Wextra -Werror gradebook.c main.c file.c sort.c ui.c -o gradebook
 ./gradebook
 
 I believe .h files are more akin to interfaces while the .c has the actual code.
