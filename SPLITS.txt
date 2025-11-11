@@ -67,5 +67,6 @@ main file will use:
 
 To load in ubuntu, ensure all files are in the right folder and run:
 gcc -std=c11 -Wall -Wextra -Werror gradebook.c main.c storage.c sort.c ui.c -o gradebook
+./gradebook
 
 I believe .h files are more akin to interfaces while the .c has the actual code.
