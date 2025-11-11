@@ -2,7 +2,7 @@
 BUILD: gradebook.c and gradebook.h
 
 FUNCTIONS: 
-add_student(id, name, grade) - Add new student to arrays
+add_student(id,name,grade) - Add new student to arrays - (pls make sure to keep all data without leading whitespaces)
 find_student(id) - Search for student by ID, return position
 update_student(id, new_grade) - Change a student's grade
 delete_student(id) - Remove student from arrays
@@ -61,7 +61,7 @@ Options:
 
 main file will use:
 #include "gradebook.h"
-#include "storage.h"   
+#include "file.h"   
 #include "sort.h"
 #include "ui.h"
 
