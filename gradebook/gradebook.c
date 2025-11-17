@@ -25,6 +25,7 @@ void add_student(int id, const char *name, float grade) {
 		printf("Error: gradebook is full!\n");
         	return;
 	}
+	printf("Added Student +1\n");
 	//sets the new student's id, name, grade
 	student_ids[student_count] = id;
 	strncpy(student_names[student_count], name, MAX_NAME_LENGTH);
