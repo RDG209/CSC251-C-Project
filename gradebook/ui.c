@@ -1,3 +1,8 @@
+/*
+ ui.c
+ User Interface
+ Luis Martinez
+*/
 #include "ui.h"
 #include "gradebook.h"
 #include "file.h"
