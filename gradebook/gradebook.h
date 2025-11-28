@@ -24,4 +24,8 @@ int get_student_count();
 void get_student_data(int position, int *id, char *name, float *grade);
 void print_all_students();
 
+/// necessary added functions
+int get_student_id(int index);
+void show_all_students(void);
+
 #endif
