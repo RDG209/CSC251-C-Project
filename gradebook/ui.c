@@ -102,7 +102,7 @@ void ui_sort_students() {
 }
 
 void ui_show_all_students() {
-    show_all_students(); // Use function from (1)
+    print_all_students(); // Use function from (1) using 'print'
 }
 
 void show_menu() {
