@@ -102,7 +102,7 @@ void ui_sort_students() {
 }
 
 void ui_show_all_students() {
-    show_all_students(); // Use function from (1)
+    print_all_students(); // Use function from (1)
 }
 
 void show_menu() {
@@ -116,8 +116,8 @@ void show_menu() {
         printf("5. Show all students\n");
         printf("6. Sort students\n");
         printf("7. Show statistics\n");
-        printf("8. Save to file (students.txt)\n");
-        printf("9. Load from file (students.txt)\n");
+        printf("8. Save to file\n");
+        printf("9. Load from file\n");
         printf("10. Close / Exit\n");
         printf("Enter your choice: ");
 
@@ -136,8 +136,8 @@ void show_menu() {
             case 5: ui_show_all_students(); break;
             case 6: ui_sort_students(); break;
             case 7: show_stats(); break;
-            case 8: save_to_file("students.txt"); break;
-            case 9: load_from_file("students.txt"); break;
+            case 8: save_to_file(); break;
+            case 9: load_from_file(); break;
             case 10: printf("Goodbye!\n"); return; // Exit loop/function
             default: printf("Invalid choice. Please try again.\n");
         }

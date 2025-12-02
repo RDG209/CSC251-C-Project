@@ -34,7 +34,7 @@ void save_to_file(void) {
     }
     
     for (int i = 0; i < get_student_count(); i++) {
-        int id = get_student_id(i);
+        int id;
         char name[100];
         float grade;
         get_student_data(i, &id, name, &grade);  // make sure to use *id *name *grade for the real function
