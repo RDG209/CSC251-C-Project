@@ -1,6 +1,7 @@
 //file.c
 #include <stdio.h>
 #include "gradebook.h" // access the right arrays
+#include "file.h" //added
 
 void load_from_file(void) {
     if (!file_exists()) { // T=1, F=0
